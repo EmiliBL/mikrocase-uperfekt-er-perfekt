@@ -22,7 +22,17 @@
 from { transform: translateX(0);}    
 to { transform: translateX(-100%);}  
 }
+
+/* special hand cursor */
+--handcursor: url(/cursor.svg) 25 25, pointer; 
 }
+
+/* Alle billede får en cursor på sig */
+@layer base {
+	img {
+		@apply cursor-(--handcursor) rounded-2xl;
+	}
+	}
 
 
 @layer base {

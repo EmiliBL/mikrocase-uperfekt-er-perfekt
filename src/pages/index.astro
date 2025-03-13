@@ -16,13 +16,19 @@ import kamera from "../assets/images/kamera.png";
 
 import "../styles/tobii.min.css";
 ---
-<MainLayout title="Titel">
+
+<MainLayout title="Titel" >
 	<!-- Progress-bar placeret i toppen af sitet -->
 	<div class="progress-bar h-4 fixed w-full bg-gradient-to-r from-red-600 to-red-900 left-0 origin-top-left top-0 right-0"></div>
 
 	<!-- Hero -->
 	<article class="p-4 md:p-0">
 		<!-- Hero -->
+		<section id="lydeffekter" class="" x-data>
+			<audio x-ref="trykforatafspillelyd">
+				<source src="retrolyd.mp3" type="audio/mpeg">
+			</audio>
+
 		<section class="grid grid-cols-1 md:grid-cols-2 max-w-4xl mx-auto prose" id="titel">
 			<div class="flex items-left justify-center p-4">
 			  <h2 style="font-family: 'Bungee Shade', sans-serif;" class="text-7xl md:text-8xl">
@@ -30,7 +36,8 @@ import "../styles/tobii.min.css";
 			  </h2>
 			</div>
 				<div class="flex items-center justify-center">
-			  <Image src={kamera} alt="fireflygenerated" class="animate-bounce w-50 ml-8" />
+			  <Image src={kamera} alt="fireflygenerated" class="animate-bounce w-50 ml-8 cursor cursor-(--handcursor)"
+	@click="$refs.trykforatafspillelyd.play()"/>
 			</div>
 		</section>
 
@@ -59,19 +66,19 @@ import "../styles/tobii.min.css";
 			</div>
 		</section>
 
-<!-- Om pierre -->
+<!-- Om pierre video-->
 		<section class="relative w-full h-screen overflow-hidden" id="herovideo">
 			<video class="absolute top-0 left-0 w-full h-full object-cover" autoplay muted loop>
 				<source src="pierre-falcke-video.mp4" type="video/mp4">
 			</video>
 			<!-- Parallax tekstboks ovenpå videoen -->
 			<div class="relative z-10 flex items-center justify-center h-full">
-				<p class="parallaxelement w-3/4 mx-auto p-10 bg-red-900 rounded-2xl text-xl">
+				<p class="parallaxelement w-3/4 mx-auto p-10 bg-red-900 rounded-2xl text-xl cursor cursor-(--handcursor)">
 					Pierre Falcke. Du ved formentligt ikke hvem han er. Men indtil for kort tid siden, så du hans værker et par gange om dagen, hver dag, året rundt. Pierre Falcke var en af verdens bedst sælgende stock-fotografer, og han solgte over 2 millioner fotos om året. Men Pierre kunne ikke drømme om at bruge sine egne fotos - faktisk kan han ikke fordrage sit eget arbejde.
 				</p>
 			</div>
 		</section>
-
+</section>
 		
 		<!-- Stickyscroll med inforbokse -->
 		<article class="md:mb-100"><!-- containeren -->
@@ -80,9 +87,9 @@ import "../styles/tobii.min.css";
 				<figcaption>Pierre Falcke, selvportræt</figcaption>
 			</a> </div><!-- sticky elementet -->
 			<div class="relative flex justify-end"><!-- relative elementet -->
-				<div class="flex flex-col w-full md:w-1/2 h-full justify-center gap-4 p-4 ">
+				<div class="flex flex-col w-full md:w-1/2 h-full justify-center gap-4 p-4 cursor cursor-(--handcursor)">
 					<div class="bg-red-600 ">
-						<p class="text-2xl italic text-center p-8 text-red-900">Pierre sælger 2 millioner fotos om året</p>
+						<p class="text-2xl italic text-center p-8 text-red-900 roun">Pierre sælger 2 millioner fotos om året</p>
 					</div>
 					<div class="bg-red-600">
 						<p class="text-2xl italic text-center p-8 text-red-900">Det svarer til én fotolicens hvert 16. sekund
@@ -98,7 +105,7 @@ import "../styles/tobii.min.css";
 		</article>
 		
 <!-- Hvad er stock fotos -->
-<section class="mt-32 max-w-4xl mx-auto my-32 prose border border-double rounded-2xl bg-red-600 p-8" id="hvaderstockfotos">
+<section class="mt-32 max-w-4xl mx-auto my-32 prose border border-double rounded-2xl bg-red-600 p-8 cursor cursor-(--handcursor)" id="hvaderstockfotos">
 	<h2 class="text-4xl text-red-400">Hvad er stock-fotos?</h2>
 	<div class="grid grid-cols-3 gap-4 text-red-900 items-start">
 		<div>
@@ -155,7 +162,7 @@ import "../styles/tobii.min.css";
 		</section>
 
 		<!-- Foto eksperimenter -->
-		<section class="max-w-4xl mx-auto my-32 prose border border-double rounded-2xl bg-red-600 p-8" id="fotoeksperimenter">
+		<section class="max-w-4xl mx-auto my-32 prose border border-double rounded-2xl bg-red-600 p-8 cursor cursor-(--handcursor)" id="fotoeksperimenter">
 			<h2 class="text-2xl text-red-400">Fotoeksperimenter</h2>
 			<div class="grid grid-cols-3 gap-4">
 				<div >
