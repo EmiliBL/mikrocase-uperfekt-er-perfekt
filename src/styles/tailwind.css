@@ -27,6 +27,10 @@ p {
   @apply text-xl mb-4;
 }
 
+h2 {
+  @apply text-7xl md:text-8xl;
+}
+
 
 
   /*Tobii mods*/
