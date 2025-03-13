@@ -10,8 +10,20 @@
 }
 
 @theme {
-  /* Her tilføjes theme variable // tokens */
+  /* Custome colors */
+  --color-red-400:#B7F6CD;
+  --color-red-600:#D85527;
+  --color-red-900:#ECE3CB;
+
+/*Infinite scroll animation*/
+--animate-infinite-scroll: infinite-scroll 25s linear infinite;  
+
+@keyframes infinite-scroll {    
+from { transform: translateX(0);}    
+to { transform: translateX(-100%);}  
 }
+}
+
 
 @layer base {
   *,
