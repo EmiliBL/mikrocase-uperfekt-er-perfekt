@@ -2,7 +2,7 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from '../components/Button.astro';
 import Link from '../components/Link.astro';
-import { Image } from 'astro:assets';
+import { Image } from 'astro/components';
 import apoteket from "../assets/images/apoteket.jpg";
 import arbejde from "../assets/images/arbejde.jpg";
 import glitch from "../assets/images/glitch.jpg";
@@ -12,12 +12,15 @@ import smena from "../assets/images/lomo-smena-17.jpg";
 import overouticm from "../assets/images/over-out-icm.jpeg";
 import pierre from "../assets/images/pierre.jpeg";
 import tyndfilm from "../assets/images/tynd-film.jpg";
+import kamera from "../assets/images/kamera.png";
+
 import "../styles/tobii.min.css";
 ---
 <MainLayout title="Titel">
 	<article class="p-4 md:p-0">
 		<section class="max-w-xl mx-auto mt-32 prose" id="titel">
 			<h2 style="font-family: 'Bungee Shade', sans-serif;" class="text-6xl md:text-9xl text-center">Uperfekt er perfekt</h2>
+			<Image src={kamera} alt="fireflygenerated" class="kamera"/>
 		</section>
 		<section class="max-w-4xl mx-auto mt-32" id="herovideo">
 			<video width="1280" height="960" autoplay muted loop>
