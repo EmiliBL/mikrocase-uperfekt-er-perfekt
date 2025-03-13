@@ -1,4 +1,6 @@
 @import 'tailwindcss';
+@import url("https://fonts.googleapis.com/css2?family=Monoton&family=Poiret+One&family=Roboto:ital,wght@0,100..900;1,100..900&family=Unbounded:wght@200..900&display=swap");
+
 @tailwind utilities;
 
 @plugin '@tailwindcss/typography';
@@ -19,6 +21,13 @@
   ::file-selector-button {
     border-color: var(--color-gray-200, currentColor);
   }
+
+
+p {
+  @apply text-xl mb-4;
+}
+
+
 
   /*Tobii mods*/
     .tobii-zoom{
