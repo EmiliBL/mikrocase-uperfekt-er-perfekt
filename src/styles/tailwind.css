@@ -1,8 +1,11 @@
 @import 'tailwindcss';
+@tailwind utilities;
 
 @plugin '@tailwindcss/typography';
 @plugin '@tailwindcss/forms';
-@plugin "daisyui";
+@plugin "daisyui" {
+  themes: all;
+}
 
 @theme {
   /* Her tilføjes theme variable // tokens */
